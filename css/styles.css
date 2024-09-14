@@ -1,0 +1,355 @@
+/* #region Root */
+  :root {
+    /* Colors */
+    --white: 255 255 255;
+    --navy-blue: 46 47 66;
+    --cloud: 244 244 253;
+    --cornflower: 231 233 252;
+    --iris: 77 90 229;
+    --ocean:64 75 191;
+
+    /* Typo Color */
+    --typo-light-pr: 255 255 255;
+    --typo-light-sec: 244 244 253;
+    --typo-dark-pr: 46 47 66;
+    --typo-dark-sec: 67 68 85;
+
+    /* Others */
+      --items: 4;
+      --indent-col: 24px;
+      --indent-row: var(--indent-cal);
+  }
+
+/* #endregion */
+
+
+/* #region Base */
+  body {
+    font-family: Roboto, sans-serif;
+    background-color: rgb(var(--white));
+    color: rgb(var(--typo-dark-sec));
+  }
+
+  ul,
+  ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1,h2,h3,h4,h5,h6,p {
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  button {
+    font-family: inherit;
+    cursor: pointer;
+    color: currentColor;
+  }
+
+/* #endregion */
+
+
+/* #region Common */
+  .section {
+    padding: 120px 0;
+  }
+  
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    font-family: Raleway, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: rgb(var(--iris));
+  }
+
+  .logo-dark {
+    color: rgb(var(--navy-blue));
+  }
+
+  .logo-light {
+    color: rgb(var(--typo-light-sec));
+  }
+
+  .section-title {
+    margin-bottom: 72px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(var(--typo-dark-pr));
+  }
+
+    /* Card set */
+    .card-set {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: var(--indent-row);
+      column-gap: var(--indent-col);
+    }
+  
+    .card-set-item {
+      width: calc((100% - var(--indent-col) * (var(--items) - 1)) / var(--items));
+    }
+
+/* #endregion */
+
+
+/* #region Header */
+  .header {
+    border-bottom: 1px solid rgb(var(--cornflower));
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  }
+
+  .nav-logo {
+    margin-right: 76px;
+  }
+
+  .nav-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 24px 0;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: rgb(var(--navy-blue));
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    color: rgb(var(--ocean));
+  }
+
+  .contact-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .contact-link {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .contact-link:hover,
+  .contact-link:focus {
+    color: rgb(var(--ocean));
+  }
+
+  .contact {
+    font-style: normal;
+  }
+
+/* #endregion */
+
+
+/* #region Hero */
+  .hero {
+    background-color: rgb(var(--navy-blue));
+    padding: 188px 0;
+  }
+
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+  }
+
+  .hero-title {
+    display: block;
+    max-width: 496px;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: rgb(var(--typo-light-pr));
+  }
+
+  .btn {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    min-width: 169px;
+    min-height: 56px;
+    padding: 16px 32px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    background-color: rgb(var(--iris));
+    color: rgb(var(--typo-light-pr));
+    border: none;
+    border-radius: 4px;
+  }
+
+  .btn:hover,
+  .btn:focus {
+    background-color: rgb(var(--ocean));
+  }
+/* #endregion */
+
+
+/* #region Advantages */
+  .adv-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .adv-item {
+    width: 264px;
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+  .adv-title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: rgb(var(--navy-blue));
+  }
+
+  .adv-text {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: rgb(var(--typo-dark-sec));
+  }
+/* #endregion */
+
+
+/* #region Team */
+  .team {
+    background-color: rgb(var(--cloud));
+  }
+
+  .team-list {
+    gap: 24px;
+  }
+
+  .team-item {
+    border-radius: 0px 0px 4px 4px;
+    background-color: rgb(var(--white));
+  }
+
+  .team-item-desc {
+    padding: 32px 0;
+  }
+
+  .team-name {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: rgb(var(--typo-dark-pr));
+  }
+
+  .team-role {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+/* #endregion */
+
+
+/* #region Portfolio */
+  .portfolio-list {
+    --items: 3;
+    --indent-row: 48px;
+  }
+
+  .portfolio-work-description {
+    padding: 32px 16px;
+    border: 1px solid rgb(var(--cornflower));
+    border-top: none;
+  }
+
+.portfolio-work-title {
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: rgb(var(--typo-dark-pr));
+  }
+
+  .portfolio-work-type {
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+/* #endregion */
+
+
+/* #region Footer */
+  .footer {
+    padding: 100px 0;
+    background-color: rgb(var(--navy-blue));
+  }
+
+  .footer-logo {
+    display: inline-block;
+    margin-bottom: 16px;
+  }
+  
+  .footer-text {
+    max-width: 264px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: rgb(var(--typo-light-sec));
+  }
+
+/* #endregion */
