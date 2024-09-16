@@ -182,7 +182,7 @@
   }
 
   .nav-link.active::after {
-    background-color: rgb(var(--iris));
+    background-color: rgb(var(--ocean));
   }
 
   .nav-link:hover,
@@ -396,7 +396,8 @@
   }
 
   .team-item:hover .socials-link,
-  .team-item:focus .socials-link {
+  .team-item:focus .socials-link,
+  .team-item:active .socials-link {
     background-color: rgb(var(--ocean));
   }
 
