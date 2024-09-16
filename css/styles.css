@@ -396,7 +396,10 @@
   }
 
   .team-item:hover .socials-link,
-  .team-item:focus .socials-link,
+  .team-item:focus .socials-link {
+    background-color: rgb(var(--ocean));
+  }
+
   .team-item:active .socials-link {
     background-color: rgb(var(--ocean));
   }
