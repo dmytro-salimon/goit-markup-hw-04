@@ -399,6 +399,7 @@
     background-color: rgb(var(--ocean));
   }
 
+  .team-item .socials-link:focus,
   .team-item .socials-link:active {
     background-color: rgb(var(--ocean));
   }
