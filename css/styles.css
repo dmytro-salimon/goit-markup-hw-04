@@ -395,8 +395,7 @@
     transition-property: background-color;
   }
 
-  .team-item:hover .socials-link,
-  .team-item:focus .socials-link {
+  .team-item:hover .socials-link {
     background-color: rgb(var(--ocean));
   }
 
